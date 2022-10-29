@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "start:dev": "nodemon --watch",
+    "dev": "nodemon --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

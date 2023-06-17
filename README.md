@@ -1,59 +1,87 @@
-# Express API Starter with Typescript
+# Express API Starter with TypeScript
 
-How to use this template:
+A basic starter for an Express.js API with TypeScript.
 
-```sh
-npx create-express-api --typescript --directory my-api-name
+## Installation
+
+Before you begin, ensure that you have Node.js and npm (Node Package Manager) installed on your machine.
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/bakiwebdev/express-js-starter.git
 ```
 
-Includes API Server utilities:
+2. Navigate to the project directory:
 
-* [morgan](https://www.npmjs.com/package/morgan)
-  * HTTP request logger middleware for node.js
-* [helmet](https://www.npmjs.com/package/helmet)
-  * Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!
-* [dotenv](https://www.npmjs.com/package/dotenv)
-  * Dotenv is a zero-dependency module that loads environment variables from a `.env` file into `process.env`
-* [cors](https://www.npmjs.com/package/cors)
-  * CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
-
-Development utilities:
-
-* [typescript](https://www.npmjs.com/package/typescript)
-  * TypeScript is a language for application-scale JavaScript.
-* [ts-node](https://www.npmjs.com/package/ts-node)
-  * TypeScript execution and REPL for node.js, with source map and native ESM support.
-* [nodemon](https://www.npmjs.com/package/nodemon)
-  * nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
-* [eslint](https://www.npmjs.com/package/eslint)
-  * ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-* [typescript-eslint](https://typescript-eslint.io/)
-  * Tooling which enables ESLint to support TypeScript.
-* [jest](https://www.npmjs.com/package/mocha)
-  * Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
-* [supertest](https://www.npmjs.com/package/supertest)
-  * HTTP assertions made easy via superagent.
-
-## Setup
-
+```bash
+cd express-js-starter
 ```
+
+3. Install the dependencies:
+
+```bash
 npm install
 ```
 
-## Lint
+## Usage
+
+The following npm scripts are available:
+
+- `start`: Builds and runs the production version of the API.
+- `dev`: Runs the API in development mode using `nodemon`, which automatically restarts the server when changes are detected.
+- `build`: Lints the code and compiles TypeScript into JavaScript.
+- `lint`: Lints the code using ESLint with the Airbnb TypeScript style guide.
+- `test`: Runs the test suite using Jest.
+
+To execute a script, run the following command:
+
+```bash
+npm run <script-name>
+```
+
+## Configuration
+
+The configuration for the Express API can be modified through environment variables. Create a `.env` file in the project root directory and add your configuration variables there. Here's an example:
+
+```plaintext
+PORT=3000
+```
+
+## Folder Structure
 
 ```
-npm run lint
+├── dist/               # Compiled JavaScript files
+├── src/                # Source code
+│   ├── api/            # Request handlers
+│   ├── interfaces/     # Type Interface
+│   ├── middlewares.ts  # Middleware functions
+│   ├── app.ts          # Express application setup
+│   └── index.ts        # Entry point
+├── .eslintrc           # ESLint configuration
+├── .gitignore          # Git ignore rules
+├── package.json        # Project metadata and dependencies
+└── tsconfig.json       # TypeScript configuration
 ```
 
-## Test
+## Dependencies
 
-```
-npm run test
-```
+- cors: ^2.8.5
+- dotenv: ^16.3.0
+- express: ^4.18.2
+- helmet: ^6.2.0
+- morgan: ^1.10.0
 
-## Development
+## License
 
-```
-npm run dev
-```
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+## Author
+
+[Biruk Endris](https://www.bakiwebdev.com)
+
+## Links
+
+- Repository: [express-js-starter](https://github.com/bakiwebdev/express-js-starter)
+- Issue Tracker: [express-js-starter Issues](https://github.com/bakiwebdev/express-js-starter/issues)
+- Documentation: [express-js-starter Readme](https://github.com/bakiwebdev/express-js-starter#readme)
